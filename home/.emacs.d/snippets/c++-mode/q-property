@@ -1,0 +1,38 @@
+# -*- mode: snippet -*-
+# name: Q_PROPERTY declaration and definition
+# key: q-property
+# --
+/**
+   @brief
+
+   @details
+*/
+Q_PROPERTY (
+    ${1:type} ${2:name}
+	READ $2
+	WRITE set${2:$(upcase-initials yas-text)}
+	NOTIFY $2Changed)
+
+$1 $2_;
+
+$1 $2 () const;
+
+void set${2:$(upcase-initials yas-text)} ($1 i_$2);
+
+void $2Changed ($1 i_$2);
+
+
+$1 $2 () const {
+    return $2_;
+}
+
+
+void set${2:$(upcase-initials yas-text)} ($1 i_$2) {
+    if (i_$2 == $2_) {
+	    return;
+	}
+
+    $2_ = i_$2;
+
+	Q_EMIT $2Changed (i_$2);
+}

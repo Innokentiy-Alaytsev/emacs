@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<purple version='1.0'>
+	<blist>
+		<group name='Друзья'>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>7482698</name>
+					<alias>cramp0</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>232442518</name>
+					<alias>Виктор</alias>
+					<setting name='last_seen' type='int'>1449748234</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>660785408</name>
+					<alias>o083to</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>71242488</name>
+					<alias>el Doctor</alias>
+					<setting name='last_seen' type='int'>1449748234</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>460572822</name>
+					<alias>Олег</alias>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Собеседники'>
+			<contact>
+				<buddy account='596092665' proto='prpl-icq'>
+					<name>460685569</name>
+					<alias>Ghaarp</alias>
+				</buddy>
+			</contact>
+		</group>
+	</blist>
+	<privacy>
+		<account proto='prpl-icq' name='596092665' mode='1'>
+			<block>352592024</block>
+			<block>432073642</block>
+			<block>383626682</block>
+			<block>123627596</block>
+			<block>388106045</block>
+			<block>496797074</block>
+			<block>1886015</block>
+			<block>119464447</block>
+			<block>123734377</block>
+			<block>115398121</block>
+			<block>122860480</block>
+			<block>136221738</block>
+			<block>119993502</block>
+			<block>125028733</block>
+			<block>124017624</block>
+			<block>123481759</block>
+			<block>116619979</block>
+			<block>361102989</block>
+			<block>124462434</block>
+			<block>118281290</block>
+			<block>123834281</block>
+			<block>117951752</block>
+			<block>128067214</block>
+			<block>119369584</block>
+			<block>126411233</block>
+			<block>117334613</block>
+			<block>119359010</block>
+			<block>117361288</block>
+			<block>131332505</block>
+			<block>119680537</block>
+			<block>464146581</block>
+			<block>141565404</block>
+			<block>121199009</block>
+			<block>352295124</block>
+			<block>123071232</block>
+			<block>123665858</block>
+			<block>328153909</block>
+			<block>572527888</block>
+			<block>142821350</block>
+			<block>620570685</block>
+			<block>607893598</block>
+			<block>443345029</block>
+			<block>498365572</block>
+			<block>449376946</block>
+			<block>139511399</block>
+			<block>569653415</block>
+			<block>331667309</block>
+			<block>141910455</block>
+			<block>142306653</block>
+			<block>438730712</block>
+			<block>439850522</block>
+			<block>215829844</block>
+			<block>144569424</block>
+			<block>142033938</block>
+			<block>144454601</block>
+			<block>140429638</block>
+			<block>476738637</block>
+			<block>356145148</block>
+			<block>453726035</block>
+			<block>627982887</block>
+			<block>623548082</block>
+			<block>387304812</block>
+		</account>
+	</privacy>
+</purple>

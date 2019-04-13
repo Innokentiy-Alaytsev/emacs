@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export HISTFILE=${WORKSPACE}/.bash_history
+
+run_as_user $@

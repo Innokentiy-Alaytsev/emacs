@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: syslog-here
+# key: syslog-here
+# --
+syslog (
+	LOG_DEBUG,
+	"%s :: %s : %d\n",
+	__FILE__,
+	__FUNCTION__,
+	__LINE__);

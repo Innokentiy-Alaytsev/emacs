@@ -1,0 +1,19 @@
+#name : include guard
+# key: once
+# --
+#ifndef ${1:`
+(upcase
+ (replace-regexp-in-string
+  "[^[:digit:][:alpha:]]"
+  "_"
+  (concat
+   (cond ((fboundp 'projectile-project-root)
+		  (file-relative-name (buffer-file-name) (projectile-project-root)))
+		 (t (file-name-nondirectory (buffer-file-name)))))))`}
+#define $1
+
+
+$0
+
+
+#endif /* $1 */

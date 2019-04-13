@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Prevent startup delay due to host lookup and error 
+# (e.g. "sudo: unable to resolve host linuxkit-00155d100105")
+if ! grep -q "$HOSTNAME" /etc/hosts; then
+    echo "127.0.0.1 $HOSTNAME" >> /etc/hosts
+fi
+
+sudo --user "${UNAME}" --login "$@"

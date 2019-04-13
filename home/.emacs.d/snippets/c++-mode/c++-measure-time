@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: c++ measure time
+# key: c++-measure-time
+# --
+
+std::chrono::time_point<std::chrono::high_resolution_clock> startTime (
+	std::chrono::high_resolution_clock::now());
+std::chrono::time_point<std::chrono::high_resolution_clock> endTime;
+
+$1
+
+endTime = std::chrono::high_resolution_clock::now();
+
+std::chrono::nanoseconds timePassed = endTime - startTime;

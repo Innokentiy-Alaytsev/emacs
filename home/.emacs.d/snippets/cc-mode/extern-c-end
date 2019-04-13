@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: extern C
+# key: extc}
+# --
+#ifdef __cplusplus
+}
+#endif

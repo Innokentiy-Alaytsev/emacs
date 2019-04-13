@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: printf-here
+# key: printf-here
+# --
+printf (
+	"%s :: %s : %d\n",
+	__FILE__,
+	__FUNCTION__,
+	__LINE__);

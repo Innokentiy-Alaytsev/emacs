@@ -1,0 +1,9 @@
+#name : #ifndef XXX; #define XXX; #endif
+# key: once-private
+# --
+#ifndef ${1:`(upcase (replace-regexp-in-string "[^[:digit:][:alpha:]]" "_"(file-name-nondirectory (buffer-file-name))))`_PRIVATE}
+#define $1
+
+$0
+
+#endif /* $1 */

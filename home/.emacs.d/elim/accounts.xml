@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<account version='1.0'>
+	<account>
+		<protocol>prpl-icq</protocol>
+		<name>596092665</name>
+		<password>/configure-account</password>
+		<alias>Wilk</alias>
+		<statuses>
+			<status type='available' name='Available' active='false'>
+				<attributes/>
+			</status>
+			<status type='free4chat' name='Free For Chat' active='false'>
+				<attributes/>
+			</status>
+			<status type='evil' name='Evil' active='false'>
+				<attributes/>
+			</status>
+			<status type='depression' name='Depression' active='false'>
+				<attributes/>
+			</status>
+			<status type='athome' name='At home' active='false'>
+				<attributes/>
+			</status>
+			<status type='atwork' name='At work' active='false'>
+				<attributes/>
+			</status>
+			<status type='lunch' name='Lunch' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='true'>
+				<attributes>
+					<attribute id='message' value='I&apos;m not here right now'/>
+				</attributes>
+			</status>
+			<status type='invisible' name='Invisible' active='false'>
+				<attributes/>
+			</status>
+			<status type='occupied' name='Occupied' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='na' name='Not Available' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+			<status type='mood' name='Feeling' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='always_use_rv_proxy' type='bool'>0</setting>
+			<setting name='server' type='string'>slogin.icq.com</setting>
+			<setting name='port' type='int'>5190</setting>
+			<setting name='use_clientlogin' type='bool'>1</setting>
+			<setting name='encoding' type='string'>ISO-8859-5</setting>
+		</settings>
+		<settings ui='(elim . garak)'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error>
+			<type>2</type>
+			<description>Incorrect password</description>
+		</current_error>
+	</account>
+</account>

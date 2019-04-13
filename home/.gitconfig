@@ -1,0 +1,6 @@
+[user]
+	name = Innokentiy Alaytsev
+	email = alaitsev@gmail.com
+	signingkey = 36CB4B7B
+[commit]
+	gpgSign = true
