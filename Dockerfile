@@ -31,7 +31,7 @@ RUN apt-get install --no-install-recommends \
 # Support scripts for system setup and application running
 COPY support_scripts/* /tmp/support_scripts/
 RUN chown root /tmp/support_scripts/* && \
-    chmod 777 /tmp/support_scripts/* && \
+    chmod 700 /tmp/support_scripts/* && \
     mv /tmp/support_scripts/* /usr/local/sbin/ && \
 # cleanup
     rm -rf /tmp/support_scripts
