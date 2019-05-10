@@ -60,6 +60,7 @@ RUN chown --recursive ${USER_ID}:${GROUP_ID} ${UHOME}/
 # .bash_history, Emacs desktop and workgroups. If this directory
 # is not bound to some host directory, then the state will be lost.
 RUN run_as_user mkdir ${WORKSPACE}
+VOLUME ["${WORKSPACE}"]
 
 # Update font cache for the user
 RUN run_as_user fc-cache --force --verbose
