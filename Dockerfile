@@ -28,25 +28,6 @@ RUN apt-get install --no-install-recommends \
         ssh \
         sudo
 
-RUN apt-get install \
-        iputils-ping \
-        htop
-
-# ccls
-# RUN apt-get install build-essential && \
-#     git clone \
-#         --branch 3537679959eeee3eebd74b0435471d6d56f62daa \
-#         --depth 1 \
-#         --shallow-submodules  \
-#         -- https://github.com/MaskRay/ccls.git /tmp/ccls && \
-#     mkdir /tmp/ccls-build && cd /tmp/ccls-build && \
-#     cmake /tmp/ccls \
-#         -DBUILD_TYPE=Release &&\
-#     make && \
-#     make install && \
-# # cleanup
-#     rm -rf /tmp/ccls /tmp/ccls-build
-
 # Support scripts for system setup and application running
 COPY support_scripts/* /tmp/support_scripts/
 RUN chown root /tmp/support_scripts/* && \
