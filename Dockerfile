@@ -17,7 +17,7 @@ RUN apt-get install --no-install-recommends \
 # Required for git to work with https
         ca-certificates \
         clang-7 \
-        cmake \        
+        cmake \
         git \
         libclang-7-dev \
         llvm-7-dev \
@@ -54,7 +54,7 @@ FROM silex/emacs:26.2 AS emacs
 
 LABEL maintainer="Innokentiy Alaytsev <alaitsev@gmail.com>"
 
-# Set these arguments to actual identifiers when building image 
+# Set these arguments to actual identifiers when building image
 # to run commands as host user.
 # Instpiration: https://jtreminio.com/blog/running-docker-containers-as-current-host-user/
 ARG USER_ID=1000
@@ -74,7 +74,7 @@ RUN apt-get install --no-install-recommends \
         clang-format-7 \
         git \
         gnupg \
-# pinentry-gtk2 is required for using gpg from emacs. 
+# pinentry-gtk2 is required for using gpg from emacs.
 # pinentry-curses will not work properly.
         pinentry-gtk2 \
         ssh \
@@ -108,7 +108,7 @@ COPY home ${UHOME}
 # Permissions
 RUN chown --recursive ${USER_ID}:${GROUP_ID} ${UHOME}/
 
-# Workspace directory will be used to store persistent state: 
+# Workspace directory will be used to store persistent state:
 # .bash_history, Emacs desktop and workgroups. If this directory
 # is not bound to some host directory, then the state will be lost.
 RUN run_as_user mkdir ${WORKSPACE}
