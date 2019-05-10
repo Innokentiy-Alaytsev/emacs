@@ -1,4 +1,56 @@
-FROM silex/emacs:26.2
+FROM ubuntu:18.04 AS ccls-build
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN echo 'APT::Get::Assume-Yes "true";' >> /etc/apt/apt.conf
+
+# Separate step for better caching
+RUN apt-get update
+
+# Eliminate warnings about package configuration being deferred
+RUN apt-get install --no-install-recommends apt-utils
+
+# ccls
+RUN apt-get install --no-install-recommends \
+        build-essential \
+        cmake \
+# Required for git to work with https
+        ca-certificates \
+        clang-7 \
+        cmake \        
+        git \
+        libclang-7-dev \
+        llvm-7-dev \
+        rapidjson-dev
+
+RUN ln --symbolic `(which clang-7)` /usr/local/sbin/clang
+
+RUN git clone \
+        --branch 0.20190314 \
+        --depth 1 \
+        --shallow-submodules  \
+        -- https://github.com/MaskRay/ccls.git /tmp/ccls && \
+    mkdir /tmp/ccls-build && cd /tmp/ccls-build && \
+    cmake /tmp/ccls \
+        -DCMAKE_BUILD_TYPE=Release &&\
+    make && \
+    make install
+
+# Cleanup
+RUN apt-get remove \
+        apt-utils \
+        build-essential \
+        libclang-7-dev \
+        pinentry-curses \
+        rapidjson-dev \
+    && apt-get autoremove && apt-get autoclean \
+    && rm -rf /tmp/* /var/lib/apt/lists/* /root/.cache/*
+
+RUN ls `(clang -print-resource-dir)` -la
+
+# ------------------------------------------------------------
+
+FROM silex/emacs:26.2 AS emacs
 
 LABEL maintainer="Innokentiy Alaytsev <alaitsev@gmail.com>"
 
@@ -73,6 +125,10 @@ RUN run_as_user fc-cache --force --verbose
 #     wget \
 #     && apt-get autoremove && apt-get autoclean \
 #     && rm -rf /tmp/* /var/lib/apt/lists/* /root/.cache/*
+
+# ccls and Clang resources. Should not be required, but I am not sure.
+COPY --from=ccls-build /usr/local/bin/ccls /usr/local/bin/ccls
+COPY --from=ccls-build /usr/lib/llvm-7/lib/clang/7.0.0 /usr/lib/llvm-7/lib/clang/7.0.0
 
 ENTRYPOINT [ "entrypoint" ]
 CMD ["emacs"]
