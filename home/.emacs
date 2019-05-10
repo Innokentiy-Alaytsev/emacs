@@ -39,6 +39,7 @@
                   company-oddmuse company-dabbrev)))
  '(company-idle-delay 0.5)
  '(company-tooltip-align-annotations t)
+ '(confirm-kill-emacs (quote y-or-n-p))
  '(cquery-sem-highlight-method (quote overlay))
  '(custom-enabled-themes (quote (ashes-and-ice)))
  '(custom-safe-themes
