@@ -47,7 +47,7 @@
     ("6e6bbc19be53abbaa2540ab463f9cbaeea9506d2049690a8a0deadf0e405d9e4" default)))
  '(default-input-method "russian-computer")
  '(delete-selection-mode t)
- '(desktop-path (quote ("~/.emacs.d/" "~" "~/.workspace")))
+ '(desktop-path (quote ("~/.workspace" "~/.emacs.d/" "~")))
  '(desktop-restore-eager 18)
  '(desktop-restore-frames t)
  '(desktop-save-mode t)
