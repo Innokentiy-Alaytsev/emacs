@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+  emacs:
+    image: innokentiyalaytsev/emacs:20190505.1
+    environment:
+      DISPLAY: 192.168.1.64:0.0
+    volumes:
+      - type: bind
+        source: /mnt/d
+        target: /mnt/d
+      - type: bind
+        source: /mnt/w
+        target: /mnt/w
+      - type: bind
+        read_only: true
+        source: /mnt/w/git-repos/docker-emacs/host/.bash_aliases
+        target: /home/emacs/.bash_aliases
+      - type: bind
+        read_only: true
+        source: /mnt/w/.linux/home/wilk/.gnupg
+        target: /home/emacs/.gnupg
+      - type: bind
+        read_only: true
+        source: /mnt/w/.linux/home/wilk/.ssh
+        target: /home/emacs/.ssh
+      - type: bind
+        source: /mnt/w/.linux/home/wilk/.emacs-workspace
+        target: /home/emacs/.workspace

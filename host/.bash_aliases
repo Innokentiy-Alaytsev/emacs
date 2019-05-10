@@ -1,0 +1,1 @@
+alias gpg='gpg --lock-never'
