@@ -117,6 +117,10 @@ VOLUME ["${WORKSPACE}"]
 # Update font cache for the user
 RUN run_as_user fc-cache --force --verbose
 
+# For GPG 2.x
+RUN mkdir --parents /run/user/${USER_ID} && \
+    chown --recursive ${USER_ID}:${GROUP_ID} /run/user/${USER_ID}/
+
 # Cleanup
 RUN apt-get remove \
         apt-utils \
