@@ -18,7 +18,7 @@ RUN apt-get update
 # Eliminate warnings about package configuration being deferred
 RUN apt-get install --no-install-recommends apt-utils
 
-RUN apt-get install \
+RUN apt-get install --no-install-recommends \
         clang-format-7 \
         git \
         gnupg \
