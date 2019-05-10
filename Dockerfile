@@ -118,13 +118,10 @@ VOLUME ["${WORKSPACE}"]
 RUN run_as_user fc-cache --force --verbose
 
 # Cleanup
-# RUN apt-get remove \
-#     apt-utils \
-#     build-essential \
-#     pinentry-curses \
-#     wget \
-#     && apt-get autoremove && apt-get autoclean \
-#     && rm -rf /tmp/* /var/lib/apt/lists/* /root/.cache/*
+RUN apt-get remove \
+        apt-utils \
+    && apt-get autoremove && apt-get autoclean \
+    && rm -rf /tmp/* /var/lib/apt/lists/* /root/.cache/*
 
 # ccls and Clang resources. Should not be required, but I am not sure.
 COPY --from=ccls-build /usr/local/bin/ccls /usr/local/bin/ccls
