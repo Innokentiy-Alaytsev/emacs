@@ -41,6 +41,7 @@
  '(company-tooltip-align-annotations t)
  '(confirm-kill-emacs (quote y-or-n-p))
  '(cquery-sem-highlight-method (quote overlay))
+ '(current-language-environment "UTF-8")
  '(custom-enabled-themes (quote (ashes-and-ice)))
  '(custom-safe-themes
    (quote
