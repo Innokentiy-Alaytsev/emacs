@@ -466,6 +466,9 @@
               (define-key python-mode-map (kbd "C-c C-d") 'py-docformatter-buffer)))
   )
 
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Language selection ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key
  (kbd "C-c C-1")
  (lambda ()
