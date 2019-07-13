@@ -116,7 +116,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (lsp-ui company-lsp yapfify flycheck-rust company-racer tt-mode markdown-mode company-auctex frame-cmds monky company-c-headers popwin workgroups2 recover-buffers glsl-mode platformio-mode clang-format qml-mode paradox window-numbering window-number undo-tree sr-speedbar paren-face nlinum magit-find-file magit-filenotify json-snatcher json-reformat git-gutter flyparens flycheck-pos-tip flycheck-color-mode-line cpputils-cmake cmake-font-lock)))
+    (noxml-fold lsp-ui company-lsp yapfify flycheck-rust company-racer tt-mode markdown-mode company-auctex frame-cmds monky company-c-headers popwin workgroups2 recover-buffers glsl-mode platformio-mode clang-format qml-mode paradox window-numbering window-number undo-tree sr-speedbar paren-face nlinum magit-find-file magit-filenotify json-snatcher json-reformat git-gutter flyparens flycheck-pos-tip flycheck-color-mode-line cpputils-cmake cmake-font-lock)))
  '(paradox-automatically-star t)
  '(paradox-execute-asynchronously (quote ask))
  '(paradox-github-token t)
@@ -465,6 +465,14 @@
             (lambda ()
               (define-key python-mode-map (kbd "C-c C-d") 'py-docformatter-buffer)))
   )
+
+;;;;;;;;;;;;;;;
+;; XML tools ;;
+;;;;;;;;;;;;;;;
+(use-package noxml-fold
+  :hook
+  (nxml-mode . noxml-fold-mode))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Language selection ;;
