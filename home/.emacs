@@ -28,7 +28,7 @@
  '(calendar-week-start-day 1)
  '(ccls-executable "~/.local/bin/ccls" t)
  '(ccls-sem-highlight-method (quote font-lock))
- '(clang-format-executable "clang-format-6.0")
+ '(clang-format-executable "clang-format-7")
  '(color-identifiers-coloring-method (quote hash))
  '(column-number-mode t)
  '(comment-fill-column 80)
