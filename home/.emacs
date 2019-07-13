@@ -26,7 +26,7 @@
      (pike-mode . autodoc))))
  '(calendar-date-style (quote european))
  '(calendar-week-start-day 1)
- '(ccls-executable "~/.local/bin/ccls" t)
+ '(ccls-executable "~/.local/bin/ccls")
  '(ccls-sem-highlight-method (quote font-lock))
  '(clang-format-executable "clang-format-7")
  '(color-identifiers-coloring-method (quote hash))
