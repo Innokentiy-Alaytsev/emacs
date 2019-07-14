@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   emacs:
-    image: innokentiyalaytsev/emacs:20190713.0
+    image: innokentiyalaytsev/emacs:20190714.0
     environment:
       DISPLAY: 192.168.1.64:0.0
     volumes:
