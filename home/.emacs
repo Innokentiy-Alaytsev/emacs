@@ -232,8 +232,8 @@
   :config
   :bind (:map c-mode-base-map
               ("C-c C-f b" . clang-format-buffer)
-              ("C-c C-f r" . clang-format-region)))
-
+              ("C-c C-f r" . clang-format-region))
+  :hook ((c-mode c++-mode objc-mode) . (lambda () (require 'clang-format))))
 
 (use-package company
   :init
