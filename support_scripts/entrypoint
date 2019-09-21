@@ -2,4 +2,12 @@
 
 export HISTFILE=${WORKSPACE}/.bash_history
 
+pushd /mnt/config
+
+find . -name '*' -exec cp --parents \{\} / \;
+
+popd
+
+find ${UHOME} -name '*' -exec chown ${UNAME}:${GNAME} {} \;
+
 run_as_user $@

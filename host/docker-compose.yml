@@ -20,11 +20,11 @@ services:
       - type: bind
         read_only: true
         source: /mnt/w/.linux/home/wilk/.gnupg
-        target: /home/emacs/.gnupg
+        target: /mnt/config/home/emacs/.gnupg
       - type: bind
         read_only: true
         source: /mnt/w/.linux/home/wilk/.ssh
-        target: /home/emacs/.ssh
+        target: /mnt/config/home/emacs/.ssh
       - type: bind
         source: /mnt/w/.linux/home/wilk/.emacs-workspace
         target: /home/emacs/.workspace
